@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const downBtn = document.querySelector('#down');
     const rightBtn = document.querySelector('#right');
 
-    const startBtn = document.querySelector('#start');
     const grid = document.querySelector('.grid');
     let squares = Array.from(document.querySelectorAll('.grid div'));
 
@@ -25,9 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[currentPosition].classList.remove('currentBlock');
     }
 
-    startBtn.addEventListener('click', () => {
-        draw();
-    });
+   draw();
 
     upBtn.addEventListener('click', () => {
         if(currentColumn >= 0 && currentRow > 0){
